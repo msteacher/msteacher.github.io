@@ -1,0 +1,13 @@
+$tablet_width: '(min-width: 768px)';
+$desktop_width: '(min-width: 1150px)';
+@mixin font($size: 15px, $color: #000, $weight: bold, $height: 24px) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+  font-family: 'Open Sans';
+}
+@mixin inline_block() {
+  display: inline-block;
+  vertical-align: top;
+}

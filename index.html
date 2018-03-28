@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Сайт Степановой Екатерины</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<meta name="keywords" content="Степанова Екатерина, Сайт учителя">
+	<meta name="description" content="Сайт учителя начальных классов Степановой Екатерины Андреевны">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<meta name = "format-detection" content = "telephone=no" />-->
+</head>
+<body>
+	<header class="page-header">
+		<h1 class="visually-hidden">Сайт Степановой Екатерины</h1>
+		<nav class="main-nav">
+			<a class="main-nav__link-logo">
+				<picture>
+					<!--<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg" />
+					<source media="(min-width: 768px)" srcset="img/logo-tablet.svg" /> -->
+					<img src="img/logo-mobile.png"alt="Логотип">
+				</picture>
+			</a>
+			<button class="main-nav__toggle main-nav__toggle--open">Открыть меню</button>
+			<div class="main-nav__menu-wrapper">
+				<ul class="main-nav__items">
+					<li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Обо мне</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Портфолио</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">ИКТ</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="banner-info">
+			<div class="banner-info__left">
+				<picture>
+					<!--<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg" />
+					<source media="(min-width: 768px)" srcset="img/logo-tablet.svg" /> -->
+					<img class="banner-info__avatar" src="img/avatar-mobile.png" alt="Аватар">
+				</picture>
+				<svg class="banner-info__avatar-rim">
+					<circle r="47" cx="50" cy="50" stroke="white" fill="none"></circle>
+				</svg>
+			</div>
+			<div class="banner-info__right">
+				<span class="banner-info__caption">Добро пожаловать на сайт учителя начальных классов!</span>
+				<p class="banner-info__description">Меня зовут Степанова Екатерина Андреевна.<br>+7 999 999-99-99</p>
+				<a class="feedback">Напишите мне</a>
+				<article class="popup-write-me">
+					<h5 class="popup-write-me__title">Напишите мне</h5>
+					<span class="popup-write-me__close" tabindex="1">Закрыть</span>
+					<form class="write_us">
+						<input type="text" id="write_us_name" name="first_name">
+						<label for="write_us_name">Представьтесь, пожалуйста</label>
+						<input type="text" id="write_us_name_e_mail" name="e_mail">
+						<label for="write_us_name_e_mail">Для отправки ответа</label>
+						<textarea id="write_us_textarea"></textarea>
+						<label for="write_us_textarea">В свободной форме</label>
+						<input type="submit" class="write_us_submit">
+					</form>
+				</article>
+			</div>
+		</div>
+		<ul class="social-list">
+			<a href="#"><li class="social-list__item social-list__item-vk">vk</li></a>
+			<a href="#"><li class="social-list__item social-list__item-fcbk">facebook</li></a>
+			<a href="#"><li class="social-list__item social-list__item-inst">instagram</li></a>
+			<a href="https://www.mgpu.ru/obrazovanie/institutes/ispo/academicbuilding/kolledzh-cheremushki/" title="Колледж МГПУ"><li class="social-list__item social-list__item-mgpu">колледж</li></a>
+		</ul>
+	</header>
+	<main class="main-page">
+		<h2 class="main-page__title">Обо мне</h2>
+		<div class="main-page__strip">
+			<img src="img/about.png">
+		</div>
+		<p class="main-page__description">Я студентка института среднего профессионального образования им. К.Д. Ушинского ГАОУ ВО МГПУ.</p>
+	</main>
+	<footer class="main-footer">
+		<section class="map" style="height: 400px">
+			<h3 class="hidden1">Схема проезда к колледжу МГПУ</h3>
+			<div id="YMapsID" style="width:100%; height:100%"></div>
+		</section>
+	</footer>
+    <script src="js/util.js"></script>
+    <script src="js/burger_menu.js"></script>
+	<script src="js/wallpaper.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="https://api-maps.yandex.ru/2.0/?load=package.standard&mode=debug&lang=ru-RU;id=YMapsID" type="text/javascript"></script>
+	<script>
+        ymaps.ready(init);
+        var myMap, myPlacemark;
+        function init() {
+            myMap = new ymaps.Map ("YMapsID", {
+                center: [55.670397, 37.572675],
+                zoom: 17
+            });
+            myPlacemark = new ymaps.Placemark ([55.670397, 37.572675], {}, {
+                iconImageHref: 'img/pin.png',
+                iconImageSize: [231, 190],
+                iconImageOffset: [-45, -185]
+            });
+            myMap.geoObjects.add(myPlacemark);
+            myMap.controls.add('zoomControl');
+        }
+	</script>
+</body>
+</html>

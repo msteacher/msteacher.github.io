@@ -1,0 +1,87 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 60px;
+  &__wrapper {
+    padding: 22px 30px 18px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__menu-wrapper--open {
+    width: 320px;
+    top: 70px;
+    position: absolute;
+    z-index: 20;
+    background-color: #fff;
+  }
+  &__menu-wrapper--close {
+    display: none;
+  }
+  &__toggle {
+    margin: 35px 30px 0 0;
+    font-size: 0;
+    border: none;
+    width: 24px;
+    cursor: pointer;
+    position: relative;
+  }
+  &__toggle--close {
+    height: 4px;
+    background-color: #fff;
+    box-shadow: 0 -8px 0 #fff,
+    0 8px 0 #fff;
+  }
+  &__toggle--close::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 20px;
+    height: 15px;
+    top: -7.5px;
+    left: 0;
+  }
+  &__toggle--open {
+    margin: 23px 32px 0 4px;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+  }
+  &__toggle--open::before,
+  &__toggle--open::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 29px;
+    height: 4px;
+  }
+  &__toggle--open::before {
+    transform: rotate(45deg);
+  }
+  &__toggle--open::after {
+    transform: rotate(-45deg);
+  }
+  &__toggle:focus {
+    outline: none;
+  }
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    border-top: 1px solid #ececec;
+    padding: 20px 30px 20px 75px;
+  }
+  &__link {
+    text-decoration: none;
+    @include font(17px);
+  }
+  &__link:active {
+    cursor: pointer;
+    color: rgba(0,0,0, 0.5);
+  }
+}

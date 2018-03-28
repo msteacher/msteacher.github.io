@@ -1,0 +1,34 @@
+.banner-info {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 100px;
+    text-align: center;
+    position: relative;
+  }
+  &__right {
+    width: 200px;
+    position: relative;
+    padding-right: 4px;
+  }
+  &__avatar {
+    padding: 5px 0 0;
+  }
+  &__avatar-rim {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    z-index: 2;
+  }
+  &__caption {
+    @include font(16px, #fff);
+    @include inline_block();
+    margin-bottom: 12px;
+  }
+  &__description {
+    @include font(12px, #fff, normal);
+    margin: 0 0 10px;
+    padding: 0 0 0 0;
+  }
+}

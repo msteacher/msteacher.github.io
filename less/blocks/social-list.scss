@@ -1,0 +1,85 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  &__item {
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  &__item-vk {
+    background-image: url(../img/vk_icon.png);
+    background-color: #5082b9;
+  }
+  &__item-fcbk {
+    background-image: url(../img/fb_icon.png);
+    background-color: #5082b9;
+  }
+  &__item-inst {
+    background-image: url(../img/insta_icon.png);
+  }
+  &__item-mgpu {
+    background-image: url(../img/mgpu_icon.svg);
+  }
+}
+
+/*
+.social_list li:nth-of-type(1) {
+  background-image: url(../img/vk_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.social_list li:nth-of-type(2) {
+  background-image: url(../img/fb_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.social_list li:nth-of-type(3) {
+  background-image: url(../img/insta_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.social_list li:hover {
+  background-color: #e74246;
+  cursor: pointer;
+}
+.social_list li:nth-of-type(1):active::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background-image: url(../img/vk_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.social_list li:nth-of-type(2):active::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background-image: url(../img/fb_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.social_list li:nth-of-type(3):active::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background-image: url(../img/insta_icon.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.social_list li:nth-of-type(1):active,
+.social_list li:nth-of-type(2):active,
+.social_list li:nth-of-type(3):active {
+  background-color: #d7373b;
+  background-image: none;
+}
+*/

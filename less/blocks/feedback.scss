@@ -1,0 +1,9 @@
+.feedback {
+  @include inline_block();
+  @include font(16px, #fff);
+  padding: 2px 10px;
+  border-radius: 15px;
+  background: #F6841F;
+  margin-bottom: 30px;
+  cursor: pointer;
+}

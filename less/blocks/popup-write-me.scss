@@ -1,0 +1,61 @@
+.popup-write-me {
+  width: 320px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  background-color: #ffffff;
+  top: -136px;
+  left: calc((100% - 320px));
+  display: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 67px 0px 64px 0px;
+  box-shadow: 0px 20px 40px rgba(0,0,0, 0.75);
+  &__title {
+    width: 400px;
+    flex-grow: 1;
+    @include font(24px);
+    text-align: center;
+    margin: 0 0 68px;
+  }
+  &__close {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    order: -1;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__close::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 5px;
+    background-color: #FEAF6B;
+    transform: rotate(45deg);
+    top: -18px;
+    right: 0px;
+  }
+  &__close::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 26px;
+    height: 5px;
+    background-color: #FEAF6B;
+    transform: rotate(-45deg);
+    top: -18px;
+    right: 0px;
+  }
+  &__close:active::before,
+  &__close:active::after,
+  &__close:hover::before,
+  &__close:hover::after,
+  &__close:focus::before,
+  &__close:focus::after {
+    background-color: #ffeeee;
+    outline: none;
+    border: none;
+  }
+}
